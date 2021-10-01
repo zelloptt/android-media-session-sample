@@ -1,5 +1,6 @@
 package com.zello.mediasessionsample.ui.main
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.zello.mediasessionsample.headset.Model
@@ -11,7 +12,7 @@ class MainViewModel : ViewModel() {
     private val disposable = CompositeDisposable()
     private val _lastMediaEvent = MutableLiveData<String>()
 
-    val lastMediaEvent = _lastMediaEvent
+    val lastMediaEvent: LiveData<String> = _lastMediaEvent
 
     init {
         Model.lastMediaEvent.skip(1).observeOn(AndroidSchedulers.mainThread()).subscribe { _lastMediaEvent.value = it }.also { disposable.add(it) }
