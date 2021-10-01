@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">Media Session Sample</string>
+	<string name="main_instructions">
+		\t1. Connect a wired headset to the phone\n\n
+		\t2. Verify that the Google app is enabled\n\n
+		\t3. Tap the headset hook button many times\n\n
+		\t4. Observe a stream of KEYCODE_MEDIA_* events\n\n
+		\t5. Disable the Google app\n\n
+		\t6. Tap the headset hook button many times\n\n
+		\t7. Observe a stream of KEYCODE_HEADSETHOOK events\n\n
+	</string>
+</resources>
